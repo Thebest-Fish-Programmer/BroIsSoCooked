@@ -1,120 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Dark Glass — Light Required</title>
-
-<link rel="stylesheet" href="Assets/Static/style.css" />
+    <meta charset="UTF-8">
+    <title>Aashrith's One Sided Gay Relationship with Emry</title>
+    <link rel="stylesheet" href="Assets/Static/style.css">
+    <link rel="icon" href="Assets/Images/Daco_177403.png" type="image/png">
 </head>
+
 <body>
-
-<!-- Enhanced SVG filters for dark glass refraction and lighting -->
-<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
-  <!-- Dark glass refraction filter -->
-  <filter id="dark-glass-refraction" x="-100%" y="-100%" width="300%" height="300%" filterUnits="userSpaceOnUse">
-    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.012" numOctaves="4" seed="5" result="turb1"/>
-    <feTurbulence type="fractalNoise" baseFrequency="0.030 0.025" numOctaves="2" seed="10" result="turb2"/>
-    
-    <feComposite in="turb1" in2="turb2" operator="multiply" result="turb"/>
-    <feGaussianBlur in="turb" stdDeviation="3" result="turbblur"/>
-    
-    <feSpecularLighting in="turbblur" surfaceScale="2" specularConstant="1.2" specularExponent="40" lighting-color="#ffffff" result="spec">
-      <fePointLight id="ptLight" x="220" y="160" z="300" />
-    </feSpecularLighting>
-    
-    <feDisplacementMap id="dispMap" in="SourceGraphic" in2="turbblur" scale="2.5" xChannelSelector="R" yChannelSelector="G" result="displaced1" />
-    <feDisplacementMap in="displaced1" in2="turb2" scale="1.2" xChannelSelector="B" yChannelSelector="A" result="displaced2" />
-    
-    <feComposite in="spec" in2="displaced2" operator="screen" result="lit" />
-    <feComposite in="lit" in2="SourceGraphic" operator="multiply" result="final"/>
-    
-    <feColorMatrix in="final" values="0.9 0.05 0.1 0 0
-                                     0.05 0.95 0.15 0 0  
-                                     0.1 0.15 1.1 0 0
-                                     0 0 0 1 0" result="tinted"/>
-    
-    <feGaussianBlur in="spec" stdDeviation="6" result="specGlow"/>
-    <feComposite in="tinted" in2="specGlow" operator="screen"/>
-  </filter>
-  
-  <!-- Enhanced light raytracing for dark mode -->
-  <filter id="dark-raytracing" x="-200%" y="-200%" width="500%" height="500%" filterUnits="userSpaceOnUse">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="0" result="original"/>
-    <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur1"/>
-    <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur2"/>
-    <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur3"/>
-    <feGaussianBlur in="SourceGraphic" stdDeviation="25" result="blur4"/>
-    <feGaussianBlur in="SourceGraphic" stdDeviation="40" result="blur5"/>
-    
-    <feComposite in="blur1" in2="original" operator="screen" result="layer1"/>
-    <feComposite in="blur2" in2="layer1" operator="screen" result="layer2"/>
-    <feComposite in="blur3" in2="layer2" operator="screen" result="layer3"/>
-    <feComposite in="blur4" in2="layer3" operator="screen" result="layer4"/>
-    <feComposite in="blur5" in2="layer4" operator="screen" result="final"/>
-    
-    <feColorMatrix in="final" values="1.2 0.1 0.1 0 0
-                                     0.1 1.2 0.2 0 0
-                                     0.1 0.2 1.0 0 0
-                                     0 0 0 1 0"/>
-  </filter>
-  
-  <!-- Light refraction when over glass -->
-  <filter id="light-refraction" x="-50%" y="-50%" width="200%" height="200%" filterUnits="userSpaceOnUse">
-    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="15" result="turb"/>
-    <feDisplacementMap in="SourceGraphic" in2="turb" scale="4" xChannelSelector="R" yChannelSelector="G"/>
-  </filter>
-</svg>
-
-<div class="page">
-  <div class="center-col">
-    <div class="liquid-glass content-inner" style="text-align:center;">
-      <img src="https://via.placeholder.com/88x88/667eea/ffffff?text=✨" alt="Design" class="extra-image shadow-caster" style="width:88px;border-radius:12px;margin:8px" />
-      <h1 class="shadow-text">Hidden in Darkness</h1>
-      <img src="https://via.placeholder.com/88x88/764ba2/ffffff?text=🔦" alt="Light" class="extra-image shadow-caster" style="width:88px;border-radius:12px;margin:8px" />
-      <div class="noise" aria-hidden="true"></div>
+    <div class="content-box">
+        <img src="Assets/Images/clipart2312384.png" alt="LGBTQ" class="extra-image" />
+        <h1>Aashrith's One Sided Gay Relationship with Emry</h1>
+        <img src="Assets/Images/clipart2312384.png" alt="LGBTQ" class="extra-image" />
     </div>
 
-    <div class="liquid-glass content-inner">
-      <img src="https://via.placeholder.com/110x110/f093fb/ffffff?text=🌙" alt="Night" class="extra-image shadow-caster" style="width:110px;border-radius:12px;margin-bottom:16px" />
-      <div class="content-text">
-        <strong class="shadow-text shadow-caster">Drag the Light to Reveal</strong>
-        <p class="shadow-text shadow-caster">This interface is shrouded in darkness. Only by dragging the light source can you illuminate and discover the hidden content within these mysterious glass panels.</p>
-        
-        <strong class="shadow-text shadow-caster">Interactive Illumination</strong>
-        <p class="shadow-text shadow-caster">The draggable light creates a dynamic illumination effect, revealing text and images as you move it around. The closer the light gets to an element, the more visible it becomes.</p>
-        
-        <strong class="shadow-text shadow-caster">Dark Glass Technology</strong>
-        <p class="shadow-text shadow-caster">Enhanced CSS filters and backdrop effects create a mysterious dark glass appearance. The light interacts with glass surfaces to create realistic refraction and highlighting effects.</p>
-        
-        <strong class="shadow-text shadow-caster">Atmospheric Design</strong>
-        <p class="shadow-text shadow-caster">Every element remains hidden in shadow until illuminated by your light source. This creates an immersive, game-like experience where discovery is key to navigation.</p>
-        
-        <strong class="shadow-text shadow-caster">Light Mechanics</strong>
-        <p class="shadow-text shadow-caster">The light source features advanced raytracing effects and changes behavior when positioned over glass surfaces, creating authentic light refraction and enhanced visual depth.</p>
-      </div>
-      <div class="noise" aria-hidden="true"></div>
+    <img src="Assets/Images/Daco_303301.png" class="moving-image" id="img1" alt="Baby" />
+    <img src="Assets/Images/Daco_303301.png" class="moving-image" id="img1" alt="Baby" />
+    <img src="Assets/Images/Daco_303301.png" class="moving-image" id="img1" alt="Baby" />
+    <img src="Assets/Images/Daco_303301.png" class="moving-image" id="img1" alt="Baby" />
+    <img src="Assets/Images/Daco_303301.png" class="moving-image" id="img1" alt="Baby" />
+    <img src="Assets/Images/Daco_303301.png" class="moving-image" id="img1" alt="Baby" />
+    <img src="Assets/Images/Daco_303301.png" class="moving-image" id="img1" alt="Baby" />
+    <img src="Assets/Images/Daco_303301.png" class="moving-image" id="img1" alt="Baby" />
+    <img src="Assets/Images/Daco_303301.png" class="moving-image" id="img1" alt="Baby" />
+
+
+    <img src="Assets/Images/Heart Eyes Emoji [Download iPhone Emojis].png" class="moving-image" id="img2"
+        alt="Heart Eyes" />
+    <img src="Assets/Images/Heart Eyes Emoji [Download iPhone Emojis].png" class="moving-image" id="img2"
+        alt="Heart Eyes" />
+    <img src="Assets/Images/Heart Eyes Emoji [Download iPhone Emojis].png" class="moving-image" id="img2"
+        alt="Heart Eyes" />
+    <img src="Assets/Images/Heart Eyes Emoji [Download iPhone Emojis].png" class="moving-image" id="img2"
+        alt="Heart Eyes" />
+    <img src="Assets/Images/Heart Eyes Emoji [Download iPhone Emojis].png" class="moving-image" id="img2"
+        alt="Heart Eyes" />
+    <img src="Assets/Images/Heart Eyes Emoji [Download iPhone Emojis].png" class="moving-image" id="img2"
+        alt="Heart Eyes" />
+    <img src="Assets/Images/Heart Eyes Emoji [Download iPhone Emojis].png" class="moving-image" id="img2"
+        alt="Heart Eyes" />
+    <img src="Assets/Images/Heart Eyes Emoji [Download iPhone Emojis].png" class="moving-image" id="img2"
+        alt="Heart Eyes" />
+    <img src="Assets/Images/Heart Eyes Emoji [Download iPhone Emojis].png" class="moving-image" id="img2"
+        alt="Heart Eyes" />
+    <img src="Assets/Images/icons8-family--man-man-boy-48.png" class="moving-image" id="img3" alt="Gay Family" />
+    <img src="Assets/Images/icons8-family--man-man-boy-48.png" class="moving-image" id="img3" alt="Gay Family" />
+    <img src="Assets/Images/icons8-family--man-man-boy-48.png" class="moving-image" id="img3" alt="Gay Family" />
+    <img src="Assets/Images/icons8-family--man-man-boy-48.png" class="moving-image" id="img3" alt="Gay Family" />
+    <img src="Assets/Images/icons8-family--man-man-boy-48.png" class="moving-image" id="img3" alt="Gay Family" />
+    <img src="Assets/Images/icons8-family--man-man-boy-48.png" class="moving-image" id="img3" alt="Gay Family" />
+    <img src="Assets/Images/icons8-family--man-man-boy-48.png" class="moving-image" id="img3" alt="Gay Family" />
+    <img src="Assets/Images/icons8-family--man-man-boy-48.png" class="moving-image" id="img3" alt="Gay Family" />
+    <img src="Assets/Images/icons8-family--man-man-boy-48.png" class="moving-image" id="img3" alt="Gay Family" />
+    <img src="Assets/Images/Nail Polish Emoji [Free Download iPhone Emojis].png" class="moving-image" id="img4"
+        alt="Nails" />
+    <img src="Assets/Images/Nail Polish Emoji [Free Download iPhone Emojis].png" class="moving-image" id="img4"
+        alt="Nails" />
+    <img src="Assets/Images/Nail Polish Emoji [Free Download iPhone Emojis].png" class="moving-image" id="img4"
+        alt="Nails" />
+    <img src="Assets/Images/Nail Polish Emoji [Free Download iPhone Emojis].png" class="moving-image" id="img4"
+        alt="Nails" />
+    <img src="Assets/Images/Nail Polish Emoji [Free Download iPhone Emojis].png" class="moving-image" id="img4"
+        alt="Nails" />
+    <img src="Assets/Images/Nail Polish Emoji [Free Download iPhone Emojis].png" class="moving-image" id="img4"
+        alt="Nails" />
+    <img src="Assets/Images/Nail Polish Emoji [Free Download iPhone Emojis].png" class="moving-image" id="img4"
+        alt="Nails" />
+    <img src="Assets/Images/Nail Polish Emoji [Free Download iPhone Emojis].png" class="moving-image" id="img4"
+        alt="Nails" />
+    <img src="Assets/Images/Nail Polish Emoji [Free Download iPhone Emojis].png" class="moving-image" id="img4"
+        alt="Nails" />
+
+    <div class="enlargen">🤣🫵</div>
+    <img src="Assets/Images/Daco_6050817.png" class="side-image right" alt="Flags" />
+    <img src="Assets/Images/Daco_6050817.png" style="transform: scaleX(-1);" class="side-image left" alt="Flags" />
+    <div class="content-box">
+        <img src="Assets/Images/progress-pride-flag.png" alt="LGBTQ" class="extra-image" />
+        <p>
+            <strong>The Beginning</strong>
+
+        <p>
+            They met by chance — at least, that's how Emry remembered it. A quiet, rainy afternoon in a small bookstore
+            tucked between a coffee shop and a vintage record store. Emry was curled up in the poetry section, chai in
+            hand, glasses slightly fogged. Aashrith stood at the far end of the store, pretending to browse travel
+            memoirs, though his eyes had already found Emry long before their conversation ever began.
+        </p>
+
+        <p>
+            Their first interaction was brief. Aashrith commented on the Neruda book in Emry’s lap. Emry responded
+            politely, closed the book, and smiled the way you do at strangers — soft, harmless, fleeting. But for
+            Aashrith, something sparked. A connection. Or so he believed.
+        </p>
+
+        <p>
+            That moment looped in his mind for weeks.
+        </p>
+
+        <p>
+            He would return to the bookstore often. Always at the same time. Always with the same faint hope — that Emry
+            might be there again, chai in hand, head tilted slightly while reading, glasses fogged just so. The image
+            became an anchor for him, the shape of a new obsession forming quietly in the space between longing and
+            delusion.
+        </p>
+
+        <strong>Aashrith’s Obsession</strong>
+
+        <p>
+            It began subtly. A few visits to Emry’s social media pages. Then more. Then screenshots. Then a spreadsheet
+            — tracking favorite quotes, tagged locations, book releases Emry seemed excited about, coffee orders from
+            stories, photos with timestamps and backgrounds carefully studied.
+        </p>
+
+        <p>
+            He learned Emry’s routines — not through conversation, but through observation. Emry went to the same cafe
+            on Thursdays, the park on Sundays. He took the 8:45 train most mornings. He liked lavender candles, always
+            wore headphones on public transit, and sometimes mouthed the words to the songs he played.
+        </p>
+
+        <p>
+            Aashrith memorized it all.
+        </p>
+
+        <p>
+            He started adjusting his own life around Emry’s without Emry knowing. Sitting two rows behind him on the
+            train. Arriving at cafes just before Emry did, pretending it was a coincidence. He learned to order Emry’s
+            drink before he could. “Two oat milk chais,” he would say. “Just in case he wants one.” The baristas thought
+            they were friends. Emry didn’t even know his name.
+        </p>
+
+        <strong>Emry’s Growing Unease</strong>
+        <p>
+        <p>At first, Emry didn’t notice. People sit in cafes. People take the same train. That’s just life.</p>
+
+        <p>
+            But then he started recognizing Aashrith’s face. Once, twice, three times — okay, maybe he just lives
+            nearby. But it kept happening. Too often. Too perfectly timed.
+        </p>
+
+        <p>
+            Then came the notes. At first, vague things left on café napkins:
+            “You looked sad today. I hope you smiled after I left.”
+        </p>
+
+        <p>
+            Then more personal:
+            “That line you underlined in the bookshop — it’s still my favorite too.”
+        </p>
+
+        <p>
+            Then a photo, printed, slipped between the pages of a returned book at the library — a blurry candid of Emry
+            laughing with friends at a park. He had never seen Aashrith there.
+        </p>
+        <p>
+            Now he was afraid.
+        </p>
+        <strong>Aashrith’s World</strong>
+        <p>
+            To Aashrith, none of this was wrong. It was romantic. Devoted. He thought of Emry as a poem he was meant to
+            memorize. A puzzle he was born to solve. He filled entire journals with imagined conversations, letters he
+            never sent, drawings of Emry asleep, though he’d never actually seen him that way. His walls were lined with
+            pins and string, photos and clippings, ticket stubs from places Emry had once posted about visiting.
+        </p>
+        <p>
+            He wrote Emry’s name over and over. Practiced saying it aloud until it felt like a prayer. Until it felt
+            like a possession.
+        </p>
+        <p>
+            Every small detail became a sign — a smile meant "keep going," a frown meant "save him." Silence was not
+            disinterest; it was shyness. Rejection didn’t exist in Aashrith’s world — only delays. Only detours. He
+            believed, deeply, that Emry would love him back. Eventually. Once he saw the whole picture. Once he
+            understood how far Aashrith had gone for him.
+        </p>
+        <strong>The Tension Builds</strong>
+        <p>
+        <p>
+            Emry changed his routines. Switched train lines. Deleted his public social media accounts. Avoided his
+            favorite spots. But Aashrith always found him again. “Fate,” he would whisper to himself. “Fate wouldn’t let
+            him disappear.”
+        </p>
+        <p>
+            He started leaving gifts — a scarf Emry once mentioned liking. A book with a highlighted line:
+            “You are the home I’ve never found.”
+        </p>
+        <p>
+            Emry started seeing him in his dreams. Then in nightmares. Then outside his window one night, standing under
+            a flickering streetlamp, eyes fixed on the glass.
+        </p>
+        <p>
+            He called the police. They filed a report, but nothing concrete could be proven. Aashrith hadn’t
+            “technically” done anything illegal. Just… watched. Just followed. Just loved.
+        </p>
+        <p>
+            But love can feel like a cage when it’s not returned.
+        </p>
+        <strong>The Story Continues</strong>
+        <p>
+
+            Emry moved cities. Unannounced. Disconnected.
+        </p>
+        <p>
+            But Aashrith is patient.
+        </p>
+        <p>
+            He’s watching train departures now. He’s learning flight paths, refreshing databases. Checking every
+            bookstore in a new radius. He still writes to Emry in a journal every night. Updates him on his day. Tells
+            him where they’ll go next. Mentions the dreams he has — the ones where they live by the sea, where Emry
+            finally turns to him and says “I see you now. I’ve always seen you.”
+        </p>
+        <p>
+            He leaves a bookmark in every poetry book he finds. Just in case Emry picks one up.
+        </p>
+        <p>
+            Just in case fate gives him another chance.
+        </p>
+        <p>
+            And the story continues.
+        </p>
+        <p>
+            Because for Aashrith, it has never ended.
+        </p>
+        <p>
+            Because love, when it festers, doesn't disappear.
+        </p>
+        <p>
+            It waits.
+        </p>
+        </p>
+        <img src="Assets/Images/progress-pride-flag.png" alt="LGBTQ" class="extra-image" />
     </div>
-  </div>
 
-  <img src="https://via.placeholder.com/180x180/96ceb4/ffffff?text=🌌" class="side-image right" alt="Space" />
-  <img src="https://via.placeholder.com/180x180/feca57/ffffff?text=⭐" style="transform:scaleX(-1)" class="side-image left" alt="Stars" />
-</div>
 
-<!-- Enhanced draggable light element -->
-<div class="light-draggable" tabindex="0" role="slider" aria-label="Drag to illuminate content">
-  <div class="core" aria-hidden="true"></div>
-  <div class="label">DRAG TO ILLUMINATE</div>
-</div>
 
-<div class="floaters" aria-hidden="true">
-  <img src="https://via.placeholder.com/60x60/ff9ff3/ffffff?text=🔮" style="left:8%;top:25%" alt="" />
-  <img src="https://via.placeholder.com/50x50/54a0ff/ffffff?text=✨" style="left:15%;top:70%" alt="" />
-  <img src="https://via.placeholder.com/55x55/5f27cd/ffffff?text=🌟" style="left:12%;top:50%" alt="" />
-  <img src="https://via.placeholder.com/65x65/00d2d3/ffffff?text=🌙" style="right:10%;top:15%" alt="" />
-  <img src="https://via.placeholder.com/45x45/ff6348/ffffff?text=💫" style="right:20%;top:65%" alt="" />
-</div>
+    <script src="Assets/Static/script.js"></script>
 
-<script src="Assets/Static/script.js"></script>
 </body>
+
 </html>
